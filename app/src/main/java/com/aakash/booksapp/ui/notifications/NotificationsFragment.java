@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -14,28 +16,22 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.aakash.booksapp.R;
 import com.aakash.booksapp.databinding.FragmentNotificationsBinding;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class NotificationsFragment extends Fragment {
+    Button btnLogOut, removeCoursesButton, registerUserButton, editProfileButton, addCoursesButton;
+    FirebaseAuth firebaseAuth;
+    TextView nameTextView, emailTextView, toolBarTitle, studentIDTextView, mobileTextView, birthdateTextView;
+    private FirebaseAuth.AuthStateListener authStateListener;
+    ImageView profileImageView;
 
     private NotificationsViewModel notificationsViewModel;
     private FragmentNotificationsBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        notificationsViewModel =
-                new ViewModelProvider(this).get(NotificationsViewModel.class);
 
-        binding = FragmentNotificationsBinding.inflate(inflater, container, false);
-        View root = binding.getRoot();
-
-        final TextView textView = binding.textNotifications;
-        notificationsViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });
-        return root;
+        return  inflater.inflate(R.layout.fragment_notifications, container, false);
     }
 
     @Override
