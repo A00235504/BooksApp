@@ -4,6 +4,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
+import android.widget.Toolbar;
 
 import com.aakash.booksapp.GlobalData.GlobalData;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -24,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding binding;
     ImageView profileLogoutButton;
+    TextView toolBarTitle;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,22 +35,22 @@ public class MainActivity extends AppCompatActivity {
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
         DatabaseReference ref = FirebaseDatabase.getInstance().getReference();
-
+        toolBarTitle = findViewById(R.id.toolbarText);
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        profileLogoutButton = findViewById(R.id.profileLogoutButton);
+//        profileLogoutButton = findViewById(R.id.profileLogoutButton);
 
-        profileLogoutButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                FirebaseAuth.getInstance().signOut();
-                Intent I = new Intent(MainActivity.this, LoginActivity.class);
-                startActivity(I);
-                GlobalData.showAdminOptions = false;
-            }
-        });
+//        profileLogoutButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                FirebaseAuth.getInstance().signOut();
+//                Intent I = new Intent(MainActivity.this, LoginActivity.class);
+//                startActivity(I);
+//                GlobalData.showAdminOptions = false;
+//            }
+//        });
         BottomNavigationView navView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
@@ -57,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
         //NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
 
         NavigationUI.setupWithNavController(binding.navView, navController);
+
     }
 
 

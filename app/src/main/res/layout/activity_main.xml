@@ -5,38 +5,39 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <androidx.appcompat.widget.Toolbar
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:title="Books My App"
-        android:background="@color/yellow">
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="?actionBarSize"
-    android:orientation="horizontal"
-    android:gravity="center"
-    android:layout_gravity="center_vertical">
+<!--    <androidx.appcompat.widget.Toolbar-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:title="Books My App"-->
+<!--        android:background="@color/yellow">-->
+<!--<LinearLayout-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="?actionBarSize"-->
+<!--    android:orientation="horizontal"-->
+<!--    android:gravity="center"-->
+<!--    android:layout_gravity="center_vertical">-->
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_vertical|center"
-        android:text="Books App"
-        android:layout_weight="1"
-        android:textSize="24sp"/>
+<!--    <TextView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:gravity="center_vertical|center"-->
+<!--        android:text="Books App"-->
+<!--        android:id="@+id/titleAppTextView"-->
+<!--        android:layout_weight="1"-->
+<!--        android:textSize="24sp"/>-->
 
-    <ImageView
-        android:layout_width="60dp"
-        android:layout_height="40dp"
-        android:layout_weight="1"
-        android:id="@+id/profileLogoutButton"
-        android:src="@drawable/profile_icon"/>
+<!--    <ImageView-->
+<!--        android:layout_width="60dp"-->
+<!--        android:layout_height="40dp"-->
+<!--        android:layout_weight="1"-->
+<!--        android:id="@+id/profileLogoutButton"-->
+<!--        android:src="@drawable/profile_icon"/>-->
 
-</LinearLayout>
-    </androidx.appcompat.widget.Toolbar>
+<!--</LinearLayout>-->
+<!--    </androidx.appcompat.widget.Toolbar>-->
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/nav_view"

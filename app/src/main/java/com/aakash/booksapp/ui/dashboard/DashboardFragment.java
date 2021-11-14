@@ -14,33 +14,28 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.aakash.booksapp.R;
 import com.aakash.booksapp.databinding.FragmentDashboardBinding;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class DashboardFragment extends Fragment {
 
-    private DashboardViewModel dashboardViewModel;
-    private FragmentDashboardBinding binding;
+    FirebaseAuth firebaseAuth;
+    TextView toolBarTitle;
+    private FirebaseAuth.AuthStateListener authStateListener;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        dashboardViewModel =
-                new ViewModelProvider(this).get(DashboardViewModel.class);
+        View view = inflater.inflate(R.layout.fragment_dashboard, container, false);
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
-        binding = FragmentDashboardBinding.inflate(inflater, container, false);
-        View root = binding.getRoot();
+        DatabaseReference ref = FirebaseDatabase.getInstance().getReference();
 
-        final TextView textView = binding.textDashboard;
-        dashboardViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });
-        return root;
+        toolBarTitle = view.findViewById(R.id.toolbarText);
+
+
+        return view;
     }
 
-    @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-        binding = null;
-    }
 }

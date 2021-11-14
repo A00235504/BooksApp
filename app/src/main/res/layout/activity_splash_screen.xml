@@ -21,7 +21,7 @@
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="My Cambrian Courses"
+        android:text="Books App"
         android:textAlignment="center"
         android:textColor="@color/black"
         style="@style/TitleTextStyle"
