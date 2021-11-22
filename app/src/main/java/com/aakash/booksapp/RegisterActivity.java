@@ -171,7 +171,7 @@ public class RegisterActivity extends AppCompatActivity {
                                                 Toast.LENGTH_SHORT).show();
                                         //startActivity(new Intent(RegisterActivity.this, MainActivity.class));
 
-                                        FirebaseAuth.getInstance().signOut();
+                                        //FirebaseAuth.getInstance().signOut();
                                         Intent I = new Intent(RegisterActivity.this, MainActivity.class);
                                         finish();
                                         startActivity(I);

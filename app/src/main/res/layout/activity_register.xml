@@ -21,7 +21,6 @@
                 android:layout_height="wrap_content"
                 android:text="Profile Registration" />
 
-
             <EditText
                 android:id="@+id/ETemail"
                 style="@style/RegisterEditText"

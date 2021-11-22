@@ -20,7 +20,6 @@ import com.aakash.booksapp.GlobalData.GlobalData;
 import com.aakash.booksapp.LoginActivity;
 import com.aakash.booksapp.R;
 import com.aakash.booksapp.RegisterActivity;
-import com.aakash.booksapp.databinding.FragmentNotificationsBinding;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -30,7 +29,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 public class NotificationsFragment extends Fragment {
-    Button btnLogOut, removeCoursesButton, registerUserButton, editProfileButton, addCoursesButton;
+    Button logoutButton, removeCoursesButton, registerUserButton, editProfileButton, addCoursesButton;
     FirebaseAuth firebaseAuth;
     TextView nameTextView, emailTextView, toolBarTitle, studentIDTextView, mobileTextView, birthdateTextView;
     private FirebaseAuth.AuthStateListener authStateListener;
@@ -50,7 +49,7 @@ public class NotificationsFragment extends Fragment {
         toolBarTitle = view.findViewById(R.id.toolbarText);
 
         removeCoursesButton = view.findViewById(R.id.removeCoursesButton);
-        btnLogOut = (Button) view.findViewById(R.id.btnLogOut);
+        logoutButton = (Button) view.findViewById(R.id.logoutButton);
         emailTextView = view.findViewById(R.id.emailTextView);
         studentIDTextView = view.findViewById(R.id.studentIDTextView);
         mobileTextView = view.findViewById(R.id.mobileTextView);
@@ -79,7 +78,7 @@ public class NotificationsFragment extends Fragment {
             }
         });
 
-        btnLogOut.setOnClickListener(new View.OnClickListener() {
+        logoutButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 

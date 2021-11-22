@@ -171,7 +171,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 style="@style/ProfileButton"
-                android:text="Add Courses" />
+                android:text="Add Books" />
+
+
+            <Button
+                android:id="@+id/logoutButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/ProfileButton"
+                android:text="Logout" />
+
 
             <Space
                 android:layout_width="match_parent"
