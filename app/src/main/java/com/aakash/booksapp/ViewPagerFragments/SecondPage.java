@@ -11,7 +11,7 @@ import androidx.fragment.app.Fragment;
 import com.aakash.booksapp.R;
 
 public class SecondPage extends Fragment {
-    TextView opportunityTextView, bookPublisherTextView, bookAuthorTextView, bookCategoryTextView, bookPagesTextView, bookPublishingDateTextView;
+    TextView priceTextView, bookPublisherTextView, bookAuthorTextView, bookCategoryTextView, bookPagesTextView, bookPublishingDateTextView;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,7 +22,7 @@ public class SecondPage extends Fragment {
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_second_page, container, false);
 
-        opportunityTextView = v.findViewById(R.id.priceTextView);
+        priceTextView = v.findViewById(R.id.priceTextView);
         bookPublisherTextView = v.findViewById(R.id.bookPublisherTextView);
         bookAuthorTextView = v.findViewById(R.id.bookAuthorTextView);
         bookCategoryTextView = v.findViewById(R.id.bookCategoryTextView);
@@ -31,7 +31,15 @@ public class SecondPage extends Fragment {
 
         try {
             String myValue = getArguments().getString("price","hello");
-            opportunityTextView.setText("$"+myValue);
+            priceTextView.setText("$"+myValue);
+
+
+            bookPublisherTextView.setText(getArguments().getString("publisher","hello"));
+            bookAuthorTextView.setText(getArguments().getString("author","hello"));
+            bookCategoryTextView.setText(getArguments().getString("category","hello"));
+            bookPagesTextView.setText(getArguments().getString("pages","hello"));
+            bookPublishingDateTextView.setText(getArguments().getString("publishingdate","hello"));
+
         }
         catch (Exception e){
 

@@ -47,11 +47,11 @@ String description, title, imageurl, price, publisher,author, category,pages,pub
             fragment = new SecondPage();
             Bundle bundle = new Bundle();
             bundle.putString("price", price);
-            bundle.putString("publisher", title);
-            bundle.putString("author", title);
-            bundle.putString("category", title);
-            bundle.putString("pages", title);
-            bundle.putString("publishingdate", title);
+            bundle.putString("publisher", publisher);
+            bundle.putString("author", author);
+            bundle.putString("category", category);
+            bundle.putString("pages", pages);
+            bundle.putString("publishingdate", publishingdate);
             fragment.setArguments(bundle);
         }
         return fragment;

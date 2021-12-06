@@ -52,7 +52,8 @@ public class DashboardFragment extends Fragment {
         noCoursesTextView = view.findViewById(R.id.noCourseTextView);
         listview = view.findViewById(R.id.mylistview);
         noCoursesTextView = view.findViewById(R.id.noCourseTextView);
-
+        toolBarTitle = view.findViewById(R.id.toolbarText);
+        toolBarTitle.setText("Favorites");
 getFirebaseData();
         return view;
     }

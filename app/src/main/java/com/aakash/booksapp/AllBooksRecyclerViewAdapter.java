@@ -55,10 +55,15 @@ public class AllBooksRecyclerViewAdapter extends FirebaseRecyclerAdapter<BookSto
 
                             Intent i = new Intent(v.getContext(), BooksViewActivity.class);
 
-                            i.putExtra("Title", dataSnapshot.child("Courses").child(name).child("coursename").getValue().toString());
-                            i.putExtra("Description", dataSnapshot.child("Courses").child(name).child("coursedescription").getValue().toString());
-                            i.putExtra("Imagelink", dataSnapshot.child("Courses").child(name).child("image").getValue().toString());
-                            i.putExtra("Opportunity", dataSnapshot.child("Courses").child(name).child("opportunity").getValue().toString());
+                            i.putExtra("Title", dataSnapshot.child("Books").child(name).child("bookname").getValue().toString());
+                            i.putExtra("Description", dataSnapshot.child("Books").child(name).child("bookdescription").getValue().toString());
+                            i.putExtra("Imagelink", dataSnapshot.child("Books").child(name).child("image").getValue().toString());
+                            i.putExtra("bookprice", dataSnapshot.child("Books").child(name).child("bookprice").getValue().toString());
+                            i.putExtra("bookpublisher",dataSnapshot.child("Books").child(name).child("bookpublisher").getValue().toString());
+                            i.putExtra("bookauthor",dataSnapshot.child("Books").child(name).child("bookauthor").getValue().toString());
+                            i.putExtra("bookcategory",dataSnapshot.child("Books").child(name).child("bookcategory").getValue().toString());
+                            i.putExtra("bookpages",dataSnapshot.child("Books").child(name).child("bookpages").getValue().toString());
+                            i.putExtra("bookpublishingdate",dataSnapshot.child("Books").child(name).child("bookpublishingdate").getValue().toString());
 
                             v.getContext().startActivity(i);
                         }

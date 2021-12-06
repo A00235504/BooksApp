@@ -2,6 +2,7 @@ package com.aakash.booksapp.ui.home;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -57,10 +58,15 @@ public class HomeFragment extends Fragment {
 
         allCoursesButton = view.findViewById(R.id.allcourses);
 
+
         allCoursesButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getContext(), BooksListActivity.class));
+                try {
+                    startActivity(new Intent(getContext(), BooksListActivity.class));
+                }catch (Exception e){
+                    Log.e("error","error");
+                }
             }
         });
 
