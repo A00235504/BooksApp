@@ -53,7 +53,7 @@ public class AllBooksRecyclerViewAdapter extends FirebaseRecyclerAdapter<BookSto
                         if(dataSnapshot != null) {
                             String name = dataSnapshot.child(model.getbookname()).getKey();
 
-                            Intent i = new Intent(v.getContext(), CourseViewActivity.class);
+                            Intent i = new Intent(v.getContext(), BooksViewActivity.class);
 
                             i.putExtra("Title", dataSnapshot.child("Courses").child(name).child("coursename").getValue().toString());
                             i.putExtra("Description", dataSnapshot.child("Courses").child(name).child("coursedescription").getValue().toString());

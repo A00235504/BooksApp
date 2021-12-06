@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddCourses"
+    android:orientation="vertical">
+
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/toolbar_custom"/>
+
+    <ScrollView android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/EditProfileEditText"
+            android:hint="Book Name"
+            android:id="@+id/courseNameEditText"/>
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/EditProfileEditText"
+            android:hint="Book description"
+            android:id="@+id/courseDescriptionEditText"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/EditProfileEditText"
+            android:hint="Book Price"
+            android:inputType="number"
+            android:id="@+id/courseOpportunityEditText"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/EditProfileEditText"
+            android:hint="Book Image Link"
+            android:id="@+id/courseImageLinkEditText"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/EditProfileEditText"
+            android:hint="Book Author"
+            android:id="@+id/bookauthorEditText"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/EditProfileEditText"
+            android:hint="Book Category"
+            android:id="@+id/bookcategoryEditText"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/EditProfileEditText"
+            android:hint="Book Pages"
+            android:id="@+id/bookpagesEditText"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/EditProfileEditText"
+            android:hint="Book Publisher"
+            android:id="@+id/bookpublisherEditText"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/EditProfileEditText"
+            android:hint="Book Publishing Date"
+            android:id="@+id/bookpublishingdateEditText"/>
+
+        <Button
+            android:id="@+id/courseAddButton"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            style="@style/LoginButton"
+            android:layout_gravity="center"
+            android:gravity="center"/>
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>

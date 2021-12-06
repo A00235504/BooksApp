@@ -1,24 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center"
     android:orientation="vertical">
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
 
             <include
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 layout="@layout/toolbar_custom"/>
+
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/mylistview"/>
+
+            <TextView
+                android:id="@+id/noCourseTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="No Courses Selected"
+                style="@style/TitleTextStyle"
+                android:layout_gravity="center"
+                android:gravity="center"/>
+
         </LinearLayout>
-
-
-    </ScrollView>
-</RelativeLayout>

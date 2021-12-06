@@ -10,7 +10,7 @@ import androidx.viewpager.widget.ViewPager;
 import com.aakash.booksapp.ViewPagerAdapter;
 import com.google.android.material.tabs.TabLayout;
 
-public class CourseViewActivity extends AppCompatActivity {
+public class BooksViewActivity extends AppCompatActivity {
 TextView titleTextView, descriptionTextView, toolBarTitle;
 ImageView courseImageView;
 
@@ -27,9 +27,16 @@ ImageView courseImageView;
 
         //view adapter for tabbar
         viewPagerAdapter = new ViewPagerAdapter(
-                getSupportFragmentManager(),getIntent().getStringExtra("Description"),
-                getIntent().getStringExtra("Title"), getIntent().getStringExtra("Imagelink"),
-                getIntent().getStringExtra("Opportunity"));
+                getSupportFragmentManager(),
+                getIntent().getStringExtra("Description"),
+                getIntent().getStringExtra("Title"),
+                getIntent().getStringExtra("Imagelink"),
+                getIntent().getStringExtra("bookprice"),
+                getIntent().getStringExtra("bookpublisher"),
+                getIntent().getStringExtra("bookauthor"),
+                getIntent().getStringExtra("bookcategory"),
+                getIntent().getStringExtra("bookpages"),
+                getIntent().getStringExtra("bookpublishingdate"));
 
         viewPager.setAdapter(viewPagerAdapter);
 

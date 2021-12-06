@@ -1,5 +1,6 @@
 package com.aakash.booksapp.ui.home;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,6 +16,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.aakash.booksapp.AllBooksRecyclerViewAdapter;
+import com.aakash.booksapp.BooksListActivity;
 import com.aakash.booksapp.Model.BookStore;
 import com.aakash.booksapp.Model.Popularbooks;
 import com.aakash.booksapp.PopularBooksRecyclerViewAdapter;
@@ -58,7 +60,7 @@ public class HomeFragment extends Fragment {
         allCoursesButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //startActivity(new Intent(getContext(),CoursesListActivity.class));
+                startActivity(new Intent(getContext(), BooksListActivity.class));
             }
         });
 

@@ -16,6 +16,8 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.aakash.booksapp.AddCourses;
+import com.aakash.booksapp.EditProfileActivity;
 import com.aakash.booksapp.GlobalData.GlobalData;
 import com.aakash.booksapp.LoginActivity;
 import com.aakash.booksapp.R;
@@ -29,7 +31,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 public class NotificationsFragment extends Fragment {
-    Button logoutButton, removeCoursesButton, registerUserButton, editProfileButton, addCoursesButton;
+    Button logoutButton, registerUserButton, editProfileButton, addCoursesButton;
     FirebaseAuth firebaseAuth;
     TextView nameTextView, emailTextView, toolBarTitle, studentIDTextView, mobileTextView, birthdateTextView;
     private FirebaseAuth.AuthStateListener authStateListener;
@@ -48,7 +50,7 @@ public class NotificationsFragment extends Fragment {
 
         toolBarTitle = view.findViewById(R.id.toolbarText);
 
-        removeCoursesButton = view.findViewById(R.id.removeCoursesButton);
+
         logoutButton = (Button) view.findViewById(R.id.logoutButton);
         emailTextView = view.findViewById(R.id.emailTextView);
         studentIDTextView = view.findViewById(R.id.studentIDTextView);
@@ -90,27 +92,21 @@ public class NotificationsFragment extends Fragment {
             }
         });
 
-        removeCoursesButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-//                Intent intentremovecourses = new Intent(getContext(), RemoveCoursesActivity.class);
-//                startActivity(intentremovecourses);
-            }
-        });
+
 
         editProfileButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent intenteditprofile = new Intent(getContext(), EditProfileActivity.class);
-//                startActivity(intenteditprofile);
+                Intent intenteditprofile = new Intent(getContext(), EditProfileActivity.class);
+                startActivity(intenteditprofile);
             }
         });
 
         addCoursesButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent intenteditprofile = new Intent(ProfileActivity.this, AddCourses.class);
-//                startActivity(intenteditprofile);
+                Intent intenteditprofile = new Intent(getContext(), AddCourses.class);
+                startActivity(intenteditprofile);
             }
         });
 

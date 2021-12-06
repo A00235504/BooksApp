@@ -7,18 +7,27 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
+import com.aakash.booksapp.ViewPagerFragments.FirstPage;
+import com.aakash.booksapp.ViewPagerFragments.SecondPage;
+
 
 public class ViewPagerAdapter
         extends FragmentPagerAdapter {
-String description, title, imageurl, opportunity;
+String description, title, imageurl, price, publisher,author, category,pages,publishingdate;
     public ViewPagerAdapter(
-            @NonNull FragmentManager fm, String description, String title, String imageurl, String opportunity)
+            @NonNull FragmentManager fm, String description, String title, String imageurl, String price, String publisher, String author,
+            String category, String pages, String publishingdate)
     {
         super(fm);
         this.description = description;
         this.title = title;
         this.imageurl = imageurl;
-        this.opportunity = opportunity;
+        this.price = price;
+        this.publisher = publisher;
+        this.author = author;
+        this.category = category;
+        this.pages = pages;
+        this.publishingdate = publishingdate;
     }
 
     @NonNull
@@ -27,18 +36,22 @@ String description, title, imageurl, opportunity;
     {
         Fragment fragment = null;
         if (position == 0){
-           // fragment = new FirstPage();
+            fragment = new FirstPage();
         Bundle bundle = new Bundle();
         bundle.putString("Description", description);
         bundle.putString("Title", title);
-            bundle.putString("Imagelink", title);
+            bundle.putString("Imagelink", imageurl);
         fragment.setArguments(bundle);
         }
         else if (position == 1) {
-            //fragment = new SecondPage();
+            fragment = new SecondPage();
             Bundle bundle = new Bundle();
-            bundle.putString("Opportunity", opportunity);
-            bundle.putString("Title", title);
+            bundle.putString("price", price);
+            bundle.putString("publisher", title);
+            bundle.putString("author", title);
+            bundle.putString("category", title);
+            bundle.putString("pages", title);
+            bundle.putString("publishingdate", title);
             fragment.setArguments(bundle);
         }
         return fragment;
@@ -55,9 +68,9 @@ String description, title, imageurl, opportunity;
     {
         String title = null;
         if (position == 0)
-            title = "Details";
+            title = "Description";
         else if (position == 1)
-            title = "Opportunities";
+            title = "About";
 
         return title;
     }
