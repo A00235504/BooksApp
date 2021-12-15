@@ -168,6 +168,12 @@
                 style="@style/ProfileButton"
                 android:text="Add Books" />
 
+            <Button
+                android:id="@+id/aboutButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/ProfileButton"
+                android:text="About App" />
 
             <Button
                 android:id="@+id/logoutButton"
@@ -183,12 +189,13 @@
 
         </LinearLayout>
     </ScrollView>
-    <Button
-        android:id="@+id/btnLogOut"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        style="@style/ProfileButton"
-        android:text="Logout" />
+
+<!--    <Button-->
+<!--        android:id="@+id/btnLogOut"-->
+<!--        style="@style/ProfileButton"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:text="Logout" />-->
 
 </RelativeLayout>

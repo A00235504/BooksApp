@@ -16,6 +16,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.aakash.booksapp.AboutPage;
 import com.aakash.booksapp.AddCourses;
 import com.aakash.booksapp.EditProfileActivity;
 import com.aakash.booksapp.GlobalData.GlobalData;
@@ -31,7 +32,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 public class NotificationsFragment extends Fragment {
-    Button logoutButton, registerUserButton, editProfileButton, addCoursesButton;
+    Button logoutButton, registerUserButton, editProfileButton, addCoursesButton, aboutAppButton;
     FirebaseAuth firebaseAuth;
     TextView nameTextView, emailTextView, toolBarTitle, studentIDTextView, mobileTextView, birthdateTextView;
     private FirebaseAuth.AuthStateListener authStateListener;
@@ -50,7 +51,7 @@ public class NotificationsFragment extends Fragment {
 
         toolBarTitle = view.findViewById(R.id.toolbarText);
 
-
+        aboutAppButton = view.findViewById(R.id.aboutButton);
         logoutButton = (Button) view.findViewById(R.id.logoutButton);
         emailTextView = view.findViewById(R.id.emailTextView);
         studentIDTextView = view.findViewById(R.id.studentIDTextView);
@@ -80,6 +81,13 @@ public class NotificationsFragment extends Fragment {
             }
         });
 
+
+        aboutAppButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getContext(), AboutPage.class));
+            }
+        });
         logoutButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

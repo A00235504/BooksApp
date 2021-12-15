@@ -27,7 +27,7 @@ public class BooksListActivity extends AppCompatActivity {
 
         getID();
 
-        toolBarTitle.setText("Courses");
+        toolBarTitle.setText("Books");
 
         mbase = FirebaseDatabase.getInstance().getReference().child("Books");
 
