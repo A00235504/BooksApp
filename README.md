@@ -19,4 +19,12 @@ Credits:
 Professor Jeffrey Maitland.
 
 
+Screenshots:
+
+<img width="405" alt="Screen Shot 2021-12-14 at 6 33 40 PM" src="https://user-images.githubusercontent.com/84158990/146296892-cb96d998-1aca-44cb-9c51-f74fbdbe08ab.png">
+<img width="405" alt="Screen Shot 2021-12-14 at 6 33 50 PM" src="https://user-images.githubusercontent.com/84158990/146296895-a129766e-a4d0-4e99-aef9-f35ea0db7e34.png">
+<img width="405" alt="Screen Shot 2021-12-14 at 6 34 01 PM" src="https://user-images.githubusercontent.com/84158990/146296912-06b5577a-d0d1-460d-9a03-1c610f0cdbc9.png">
+<img width="405" alt="Screen Shot 2021-12-14 at 6 34 05 PM" src="https://user-images.githubusercontent.com/84158990/146296922-82e50bb7-2586-4edd-94a3-a8d2ed21f854.png">
+
+
 Thank you!
